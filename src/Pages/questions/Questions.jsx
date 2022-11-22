@@ -3,7 +3,7 @@ import LeftSideBar from '../../components//leftSidebar/LeftSideBar'
 import RightSideBar from '../../components/rightSidebar/RightSideBar'
 import HomeMainBar from '../../components//homeMainbar/HomeMainBar'
 // import '../../App.css'
-function Home() {
+function Questions() {
   return (
     <div className='home-container-1'>
       <LeftSideBar />
@@ -16,4 +16,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Questions
