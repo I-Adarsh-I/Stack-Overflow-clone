@@ -22,6 +22,7 @@
   border: none;
   text-decoration: none;
   transition: 0.3s;
+  cursor: pointer;
 }
 .main-bar-header .ask-btn:hover {
   background-color: #0086d8;

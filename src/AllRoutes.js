@@ -4,6 +4,7 @@ import Home from "./Pages/home/Home"
 import Auth from "./Pages/auth/Auth"
 import Questions from './Pages/questions/Questions'
 import AskQuestions from './Pages/askQuestions/AskQuestions'
+import DisplayQuestions from './Pages/questions/DisplayQuestions'
 
 function AllRoutes() {
   return (
@@ -12,6 +13,7 @@ function AllRoutes() {
       <Route path='/Auth' element={<Auth/>} />
       <Route path='/Questions' element={<Questions/>} />
       <Route path='/AskQuestions' element={<AskQuestions/>} />
+      <Route path='/Questions/:id' element={<DisplayQuestions/>} />
     </Routes> 
   )
 }

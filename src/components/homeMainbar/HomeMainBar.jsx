@@ -7,49 +7,82 @@ function HomeMainBar() {
 
   var questionsList = [
     {
-      id: 1,
-      votes: 10,
+      _id: 1,
+      upVotes: 10,
+      downVotes: 5,
       noOfAnswers: 5,
       questionTitle: "How to create a React app?",
       questionBody:
         "I am new to React and I want to create a React app. Can anyone help me?",
       questionTags: ["React", "JavaScript", "HTML"],
       userPosted: "John Doe",
+      userId: 1,
       askedOn: "Jan 1, 2022",
+      answer: [{
+        answerBody:"Answer",
+        userAnswered:'Johnny sins',
+        answeredOn:"jan 5",
+        userId: 2,
+      }]
     },
     {
-      id: 2,
-      votes: 10,
-      noOfAnswers: 6,
+      _id: 2,
+      upVotes: 10,
+      downVotes: 5,
+      noOfAnswers: 5,
       questionTitle: "How to create a React app?",
       questionBody:
         "I am new to React and I want to create a React app. Can anyone help me?",
-      questionTags: ["React", "CSS"],
+      questionTags: ["React", "JavaScript", "HTML"],
       userPosted: "John Doe",
+      userId: 1,
       askedOn: "Jan 1, 2022",
+      answer: [{
+        answerBody:"Answer",
+        userAnswered:'Johnny sins',
+        answeredOn:"jan 5",
+        userId: 2,
+      }]
     },
     {
-      id: 3,
-      votes: 1,
-      noOfAnswers: 3,
+      _id: 3,
+      upVotes: 10,
+      downVotes: 5,
+      noOfAnswers: 5,
       questionTitle: "How to create a React app?",
       questionBody:
         "I am new to React and I want to create a React app. Can anyone help me?",
-      questionTags: ["JavaScript"],
+      questionTags: ["React", "JavaScript", "HTML"],
       userPosted: "John Doe",
+      userId: 1,
       askedOn: "Jan 1, 2022",
+      answer: [{
+        answerBody:"Answer",
+        userAnswered:'Johnny sins',
+        answeredOn:"jan 5",
+        userId: 2,
+      }]
     },
     {
-      id: 4,
-      votes: 23,
-      noOfAnswers: 7,
+      _id: 4,
+      upVotes: 10,
+      downVotes: 5,
+      noOfAnswers: 5,
       questionTitle: "How to create a React app?",
       questionBody:
         "I am new to React and I want to create a React app. Can anyone help me?",
-      questionTags: ["React"],
+      questionTags: ["React", "JavaScript", "HTML"],
       userPosted: "John Doe",
+      userId: 1,
       askedOn: "Jan 1, 2022",
+      answer: [{
+        answerBody:"Answer",
+        userAnswered:'Johnny sins',
+        answeredOn:"jan 5",
+        userId: 2,
+      }]
     },
+    
   ];
 
   const user = 1
@@ -75,7 +108,7 @@ function HomeMainBar() {
           <h1>All Questions</h1>
         )}
 
-        <button onClick ={checkAuth}className="ask-btn">
+        <button onClick ={checkAuth} className="ask-btn">
           Ask Questions
         </button>
       </div>
