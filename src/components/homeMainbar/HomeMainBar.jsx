@@ -1,6 +1,6 @@
 import React from "react";
 import "./homeMainbar.css";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import QuestionList from "./QuestionList";
 
 function HomeMainBar() {
@@ -81,8 +81,7 @@ function HomeMainBar() {
         answeredOn:"jan 5",
         userId: 2,
       }]
-    },
-    
+    }
   ];
 
   const user = 1
