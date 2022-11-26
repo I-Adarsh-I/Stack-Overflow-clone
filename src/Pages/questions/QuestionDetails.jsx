@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import Downicon from "../../resources/caret-down-solid.svg";
 import Upicon from "../../resources/caret-up-solid.svg";
 import "./questions.css";
+import DisplayAnswer from "./DisplayAnswer";
 
 const QuestionDetails = () => {
   const { id } = useParams();
@@ -140,6 +141,28 @@ const QuestionDetails = () => {
                       </div>
                     </div>
                   </div>
+                </section>
+                {
+                    question.noOfAnswers !==0 &&(
+                        <section>
+                            <h1>{question.noOfAnswers} Answers</h1>
+                            <DisplayAnswer key={question._id} question={question}/>
+                        </section>
+                    )
+                }
+                <section className="post-ans-container">
+                    <h3>Your Answer</h3>
+                    <form>
+                        <textarea name="" cols="30" rows="10"></textarea><br/>
+                        <input type='submit' className="post-ans-btn" value='Post Your Answer'/>
+                    </form>
+                    <p>Browse other question tagged</p>
+                    {
+                        question.questionTags.map((tag) =>(
+                            <Link to ='/Tags' key = {tag} className='ans-tags'>{tag}</Link>
+                        ))
+                    } or
+                    <Link to='/AskQuestions' style ={{textdecoration:'none', color:'#009dff' }}>ask your own question</Link>
                 </section>
               </div>
             ))}
