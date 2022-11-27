@@ -108,10 +108,20 @@ const QuestionDetails = () => {
                 <section className="question-details-container">
                   <h1>{question.questionTitle}</h1>
                   <div className="question-details-container-2">
-                    <div className="question votes">
-                      <img src={Upicon} alt="upward-icon" width="18px" />
+                    <div className="question-votes">
+                      <img
+                        src={Upicon}
+                        alt="upward-icon"
+                        width="18px"
+                        className="votes-icon"
+                      />
                       <p>{question.upVotes - question.downVotes}</p>
-                      <img src={Downicon} alt="dowward-icon" width="18px" />
+                      <img
+                        src={Downicon}
+                        alt="dowward-icon"
+                        width="18px"
+                        className="votes-icon"
+                      />
                     </div>
                     <div style={{ width: "100%" }}>
                       <p className="question-body">{question.questionBody}</p>
@@ -120,7 +130,7 @@ const QuestionDetails = () => {
                           <p key={tags}>{tags}</p>
                         ))}
                       </div>
-                      <div className="question-action-user">
+                      <div className="question-actions-user">
                         <div>
                           <button type="button"> Share</button>
                           <button type="button"> Delete</button>
@@ -132,7 +142,12 @@ const QuestionDetails = () => {
                             className="user-link "
                             style={{ color: "#0086dB" }}
                           >
-                            <Avatar backgroundColor="orange" px="8px" py="5px">
+                            <Avatar
+                              backgroundColor="orange"
+                              px="8px"
+                              py="13px"
+                              borderRadius="5px"
+                            >
                               {question.userPosted.charAt(0).toUpperCase()}
                             </Avatar>
                             <div>{question.userPosted}</div>
@@ -142,27 +157,39 @@ const QuestionDetails = () => {
                     </div>
                   </div>
                 </section>
-                {
-                    question.noOfAnswers !==0 &&(
-                        <section>
-                            <h1>{question.noOfAnswers} Answers</h1>
-                            <DisplayAnswer key={question._id} question={question}/>
-                        </section>
-                    )
-                }
+                {question.noOfAnswers !== 0 && (
+                  <section>
+                    <h1>{question.noOfAnswers} Answers</h1>
+                    <DisplayAnswer key={question._id} question={question} />
+                  </section>
+                )}
                 <section className="post-ans-container">
-                    <h3>Your Answer</h3>
-                    <form>
-                        <textarea name="" cols="30" rows="10"></textarea><br/>
-                        <input type='submit' className="post-ans-btn" value='Post Your Answer'/>
-                    </form>
+                  <h3>Your Answer</h3>
+                  <form>
+                    <textarea name="" cols="30" rows="10"></textarea>
+                    <br />
+                    <input
+                      type="submit"
+                      className="post-ans-btn"
+                      value="Post Your Answer"
+                    />
+                  </form>
+                  <div>
                     <p>Browse other question tagged</p>
-                    {
-                        question.questionTags.map((tag) =>(
-                            <Link to ='/Tags' key = {tag} className='ans-tags'>{tag}</Link>
-                        ))
-                    } or
-                    <Link to='/AskQuestions' style ={{textdecoration:'none', color:'#009dff' }}>ask your own question</Link>
+                    {question.questionTags.map((tag) => (
+                      <Link to="/Tags" key={tag} className="ans-tags">
+                        { tag }
+                      </Link>
+                    ))}{" "}
+                    or
+                    <Link
+                      to="/AskQuestions"
+                      style={{ textdecoration: "none", color: "#009dff" }}
+                    >
+                      {" "}
+                      ask your own question
+                    </Link>
+                  </div>
                 </section>
               </div>
             ))}
