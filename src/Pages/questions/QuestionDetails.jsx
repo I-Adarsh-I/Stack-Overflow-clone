@@ -175,16 +175,16 @@ const QuestionDetails = () => {
                     />
                   </form>
                   <div>
-                    <p>Browse other question tagged</p>
+                    <p>Browse other question tagged:</p>
                     {question.questionTags.map((tag) => (
-                      <Link to="/Tags" key={tag} className="ans-tags">
+                      <Link to="/Tags" key={tag} className="ans-tags" style={{textDecoration:"none", color:"black", padding:"5px"}}>
                         { tag }
                       </Link>
                     ))}{" "}
                     or
                     <Link
                       to="/AskQuestions"
-                      style={{ textdecoration: "none", color: "#009dff" }}
+                      style={{textDecoration:"none" ,padding:"5px", color:"#009dff"}}
                     >
                       {" "}
                       ask your own question
