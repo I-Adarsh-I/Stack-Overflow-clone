@@ -1,9 +1,10 @@
 .question-details-page{
-    width: calc( 100% - 300px - 24px );
+    width: calc( 100% - 300px - 24px);
     float: left;
     margin: 25px 0px;
     padding: 0px;
 }
+
 .question-details-container{
     margin-bottom: 20px;
     padding-bottom: 20px;
@@ -39,15 +40,16 @@
     justify-content: flex-start;
 }
 
-.question-details-container .question-details-tags p{
+.question-details-container .question-details-tags p,
+.post-ans-container p ,.ans-tags{
     padding: 5px 5px;
     margin: 3px;
     font-size: 13px;
     border-radius: 2px;
-    /* background-color: #e1ecf4; */
+    background-color: #e1ecf4;
     color: #39739d;
     text-decoration: none;
-    /* line-height: 22px; */
+    line-height: 22px;
 }
 .question-actions-user{
     width: 100%;
@@ -118,11 +120,4 @@
     font-size: 14px;
     line-height: 18px;
     white-space: pre-line;
-}
-.post-ans-container div{
-    display: flex;
-    align-items: center;
-}
-.post-ans-container div p{
-    font-size: 15px;
 }

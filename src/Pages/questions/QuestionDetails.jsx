@@ -174,8 +174,8 @@ const QuestionDetails = () => {
                       value="Post Your Answer"
                     />
                   </form>
-                  <div>
-                    <p>Browse other question tagged:</p>
+                  <div style={{display:"flex", alignItems:"center"}}>
+                    <p style={{backgroundColor:"transparent"}}>Browse other question tagged:</p>
                     {question.questionTags.map((tag) => (
                       <Link to="/Tags" key={tag} className="ans-tags" style={{textDecoration:"none", color:"black", padding:"5px"}}>
                         { tag }
