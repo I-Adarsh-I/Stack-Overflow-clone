@@ -10,6 +10,24 @@ function Auth() {
     setIsSignup((prevIsSignup) => !prevIsSignup);
   };
 
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    if(!email && !password){
+      alert("Please enter the email and password")
+    }
+    if(isSignup){
+      if(!name){
+        alert("Plase enter your name to continue")
+      }
+    }
+
+  }
+
   return (
     <section className="auth-section">
       {isSignup && <Aboutauth />}
@@ -23,23 +41,23 @@ function Auth() {
             width={50}
           />
         )}
-        <form>
+        <form onSubmit={handleSubmit}>
           {isSignup && (
             <label htmlFor="name">
               <h4>Username</h4>
-              <input type="text" name="name" id="name" />
+              <input type="text" name="name" id="name" onChange={(e) => {setName(e.target.value)}} />
             </label>
           )}
           <label htmlFor="email">
             <h4>Email</h4>
-          <input type="email" name="email" id="email" />
+          <input type="email" name="email" id="email" onChange={(e) => {setEmail(e.target.value)}} />
           </label>
           <label htmlFor="password">
             <div className="pass-div" style={{display:"flex", justifyContent:"space-between",alignItems:"center"}}>
               <h4>Password</h4>
               {!isSignup && <h4 style ={{fontSize:"13px", color:"#007ac6"}}>Forgot Password?</h4>}
             </div>
-            <input type="password" name="password" id="password" />
+            <input type="password" name="password" id="password"onChange={(e) => {setPassword(e.target.value)}} />
             {isSignup && (
               <p
                 style={{ color: "#666767", fontSize: "13px", margin: "0px" }}

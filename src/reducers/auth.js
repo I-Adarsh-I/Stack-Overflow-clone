@@ -1,9 +1,9 @@
 const authReducer = (state ={}, actions) => {
-    switch(key){
-        case value:
-            break;
+    switch(actions.type){
+        case "AUTh":
+            return state;
         default:
-            break;
+            return state; 
     }
 }
 export default authReducer;
