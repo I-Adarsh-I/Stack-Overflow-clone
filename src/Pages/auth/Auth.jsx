@@ -23,15 +23,17 @@ function Auth() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!email && !password) {
-      alert("Please enter the email and password");
+      alert("Please enter the email and password"); 
     }
     if (isSignup) {
       if (!name) {
         alert("Plase enter your name to continue");
       }
-      dispatch(signup({ name, email, password }), navigate);
+      dispatch(signup({ name, email, password }));
+      navigate('/')
     } else {
       dispatch(login({ email, password }), navigate);
+      navigate('/')
     }
   };
   //

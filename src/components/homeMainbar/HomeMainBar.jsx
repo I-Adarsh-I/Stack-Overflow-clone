@@ -107,7 +107,7 @@ function HomeMainBar() {
           <h1>All Questions</h1>
         )}
 
-        <button onClick ={checkAuth} className="ask-btn">
+        <button onClick ={  checkAuth} className="ask-btn">
           Ask Questions
         </button>
       </div>
